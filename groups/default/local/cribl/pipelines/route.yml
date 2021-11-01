@@ -10,6 +10,15 @@ routes:
     clones: []
     filter: __inputId=='datagen:Datagen_001'
     output: Lab3_SplunkTCP_9997_Training_Server
+  - id: FS1UHW
+    name: Eval
+    final: true
+    disabled: false
+    pipeline: passthru
+    description: ""
+    clones: []
+    filter: "index == null ? 'main' : index"
+    output: Lab3_SplunkTCP_9997_Training_Server
   - id: default
     name: default
     final: true
