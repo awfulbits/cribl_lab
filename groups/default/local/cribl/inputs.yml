@@ -1,0 +1,50 @@
+inputs:
+  Lab3_SplunkTCP_9997:
+    disabled: false
+    host: 0.0.0.0
+    tls:
+      disabled: true
+    ipWhitelistRegex: /.*/
+    maxActiveCxn: 1000
+    enableProxyHeader: false
+    staleChannelFlushMs: 10000
+    type: splunk
+    port: 9997
+  Lab3_SplunkHEC_8088:
+    disabled: false
+    host: 0.0.0.0
+    tls:
+      disabled: true
+    maxActiveReq: 256
+    enableProxyHeader: false
+    activityLogSampleRate: 100
+    splunkHecAPI: /services/collector
+    splunkHecAcks: false
+    staleChannelFlushMs: 10000
+    type: splunk_hec
+    port: 8088
+    allowedIndexes:
+      - cribl
+    authTokens:
+      - token: "#42:0NSthJdApgYkWaSBRz2ngsSgeoHC4Y00fGH36Xdv04IaZMLfgtVpoXTxsaaYJU7O\
+          aaynJ2Y5XZTuCXb7ozqHwg=="
+        description: Lab3_SplunkHEC_8088_Token
+  Lab3_Syslog_TCP_514:
+    disabled: false
+    host: 0.0.0.0
+    maxBufferSize: 1000
+    ipWhitelistRegex: /.*/
+    timestampTimezone: local
+    singleMsgUdpPackets: false
+    enableProxyHeader: false
+    keepFieldsList: []
+    tls:
+      disabled: true
+    type: syslog
+    tcpPort: 514
+  Lab3_Datagen_BigJSON:
+    disabled: false
+    samples:
+      - eventsPerSec: 10
+        sample: big_json
+    type: datagen

@@ -1,0 +1,35 @@
+outputs:
+  Lab3_SplunkTCP_9997_Training_Server:
+    systemFields:
+      - cribl_pipe
+    port: 9997
+    nestedFields: none
+    throttleRatePerSec: "0"
+    tls:
+      disabled: true
+    connectionTimeout: 10000
+    writeTimeout: 60000
+    enableMultiMetrics: false
+    enableACK: true
+    onBackpressure: block
+    authType: manual
+    authToken: ""
+    type: splunk
+    host: 138.197.66.7
+  Lab3_SplunkTCP_9997_Broken_Server:
+    systemFields:
+      - cribl_pipe
+    port: 9997
+    nestedFields: none
+    throttleRatePerSec: "0"
+    tls:
+      disabled: true
+    connectionTimeout: 10000
+    writeTimeout: 60000
+    enableMultiMetrics: false
+    enableACK: true
+    onBackpressure: block
+    authType: manual
+    authToken: ""
+    type: splunk
+    host: cribl-broken.ddns.net
