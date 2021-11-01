@@ -1,0 +1,21 @@
+id: default
+groups: {}
+routes:
+  - id: default
+    name: default
+    final: true
+    disabled: false
+    pipeline: main
+    description: ""
+    clones: []
+    filter: "true"
+    output: default
+  - id: TUuSxp
+    name: Datagen_001 To Splunk
+    final: true
+    disabled: false
+    pipeline: passthru
+    description: ""
+    clones: []
+    filter: __inputId=='datagen:Datagen_001'
+    output: Lab3_SplunkTCP_9997_Training_Server
