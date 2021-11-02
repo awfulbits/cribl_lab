@@ -38,5 +38,5 @@ routes:
     pipeline: main
     description: ""
     clones: []
-    filter: "true"
+    filter: host == "strosin1183"
     output: Lab3_SplunkTCP_9997_Training_Server
