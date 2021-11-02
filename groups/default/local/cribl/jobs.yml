@@ -1,0 +1,31 @@
+AWS_S3_Lab:
+  type: collection
+  ttl: 4h
+  removeFields: []
+  resumeOnBoot: false
+  schedule: {}
+  collector:
+    conf:
+      awsAuthenticationMethod: manual
+      signatureVersion: v4
+      enableAssumeRole: false
+      recurse: true
+      maxBatchSize: 10
+      reuseConnections: true
+      rejectUnauthorized: true
+      awsApiKey: AKIAT7S5JUNMMDTQZ75R
+      awsSecretKey: "#42:0A7UQMD+e6Ov/NnIBVNAQaPEgfgJPDUdPMqL8fitAcyF0DNtegsklyBV8Xm15qVPK8\
+        ot5QPNFDJH8+vz+pOHag=="
+      region: us-east-2
+      bucket: "'concanon-cribl'"
+      path: "`student_julian/${host}/${sourcetype}/${_time: '%Y-%m-%d'}/${_time:
+        %H}`"
+    destructive: false
+    type: s3
+  input:
+    type: collection
+    staleChannelFlushMs: 10000
+    sendToRoutes: true
+    preprocess:
+      disabled: true
+    throttleRatePerSec: "0"
