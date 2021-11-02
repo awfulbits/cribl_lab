@@ -5,7 +5,7 @@ routes:
     name: Datagen_002 To AWS S3 Bucket
     final: true
     disabled: false
-    pipeline: devnull
+    pipeline: main
     description: ""
     clones: []
     filter: __inputId=='datagen:Datagen_002'
