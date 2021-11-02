@@ -36,7 +36,7 @@ outputs:
   AWS_S3_Lab:
     systemFields:
       - cribl_pipe
-    awsAuthenticationMethod: auto
+    awsAuthenticationMethod: manual
     signatureVersion: v4
     reuseConnections: true
     rejectUnauthorized: true
@@ -58,3 +58,6 @@ outputs:
     bucket: "'concanon-cribl'"
     region: us-east-2
     destPath: "'student_julian'"
+    awsApiKey: AKIAT7S5JUNMMDTQZ75R
+    awsSecretKey: "#42:7PknTsc9WOuQGN+vGygbryrSXQqz8fPENKLmEEviuJIz1XXQBUk7ldmhwTZw+iXYf7Dc\
+      drmRDyEFBru8v4WCfA=="
