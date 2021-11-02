@@ -3,29 +3,32 @@ groups: {}
 routes:
   - id: J3bFeC
     name: Datagen_002 To AWS S3 Bucket
-    final: true
+    final: false
     disabled: false
     pipeline: main
     description: ""
-    clones: []
+    clones:
+      - {}
     filter: __inputId=='datagen:Datagen_002'
     output: AWS_S3_Lab
   - id: TUuSxp
     name: Datagen_001 To Splunk
-    final: true
+    final: false
     disabled: false
     pipeline: passthru
     description: ""
-    clones: []
+    clones:
+      - {}
     filter: __inputId=='datagen:Datagen_001'
     output: Lab3_SplunkTCP_9997_Training_Server
   - id: FS1UHW
     name: Eval
-    final: true
+    final: false
     disabled: false
     pipeline: passthru
     description: ""
-    clones: []
+    clones:
+      - {}
     filter: "index == null ? 'main' : index"
     output: Lab3_SplunkTCP_9997_Training_Server
   - id: default
@@ -36,4 +39,4 @@ routes:
     description: ""
     clones: []
     filter: "true"
-    output: default
+    output: Lab3_SplunkTCP_9997_Training_Server
