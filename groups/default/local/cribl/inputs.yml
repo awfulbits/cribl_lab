@@ -60,6 +60,6 @@ inputs:
   Datagen_002:
     disabled: false
     samples:
-      - eventsPerSec: 2
+      - eventsPerSec: 1
         sample: syslog
     type: datagen
