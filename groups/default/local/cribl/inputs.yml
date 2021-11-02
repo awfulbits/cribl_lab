@@ -49,7 +49,7 @@ inputs:
         sample: big_json
     type: datagen
   Datagen_001:
-    disabled: false
+    disabled: true
     samples:
       - eventsPerSec: 2
         sample: business_event
@@ -57,3 +57,9 @@ inputs:
     metadata:
       - name: cribl_student
         value: "'julian'"
+  Datagen_002:
+    disabled: false
+    samples:
+      - eventsPerSec: 10
+        sample: syslog
+    type: datagen
