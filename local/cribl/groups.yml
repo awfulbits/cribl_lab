@@ -1,0 +1,4 @@
+default:
+  description: Default Worker Group
+  tags: default
+  configVersion: 79fa1d0

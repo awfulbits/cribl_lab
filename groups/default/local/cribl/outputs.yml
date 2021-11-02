@@ -33,3 +33,28 @@ outputs:
     authToken: ""
     type: splunk
     host: cribl-broken.ddns.net
+  AWS_S3_Lab:
+    systemFields:
+      - cribl_pipe
+    awsAuthenticationMethod: auto
+    signatureVersion: v4
+    reuseConnections: true
+    rejectUnauthorized: true
+    enableAssumeRole: false
+    stagePath: $CRIBL_HOME/state/outputs/staging
+    addIdToStagePath: true
+    removeEmptyDirs: false
+    objectACL: private
+    partitionExpr: "`${host}/${sourcetype}`"
+    format: json
+    baseFileName: "`CriblOut`"
+    compress: none
+    maxFileSizeMB: 32
+    maxFileOpenTimeSec: 300
+    maxFileIdleTimeSec: 30
+    maxOpenFiles: 100
+    onBackpressure: block
+    type: s3
+    bucket: "'concanon-cribl'"
+    region: us-east-2
+    destPath: "'student_julian'"
