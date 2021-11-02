@@ -18,7 +18,7 @@ AWS_S3_Lab:
         ot5QPNFDJH8+vz+pOHag=="
       region: us-east-2
       bucket: "'concanon-cribl'"
-      path: "/student_julian/${host}/${sourcetype}/${_time: %Y-%m-%d}/${_time: %H}"
+      path: /student_julian/${host}/${sourcetype}/${_time:%Y-%m-%d}/${_time:%H}
     destructive: false
     type: s3
   input:
