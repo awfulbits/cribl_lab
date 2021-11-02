@@ -2,6 +2,10 @@ outputs:
   Lab3_SplunkTCP_9997_Training_Server:
     systemFields:
       - cribl_pipe
+      - cribl_host
+      - cribl_input
+      - cribl_output
+      - cribl_wp
     port: 9997
     nestedFields: none
     throttleRatePerSec: "0"
