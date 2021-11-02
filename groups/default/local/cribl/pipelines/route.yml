@@ -1,6 +1,15 @@
 id: default
 groups: {}
 routes:
+  - id: J3bFeC
+    name: Datagen_002 To AWS S3 Bucket
+    final: true
+    disabled: false
+    pipeline: devnull
+    description: ""
+    clones: []
+    filter: __inputId=='datagen:Datagen_002'
+    output: AWS_S3_Lab
   - id: TUuSxp
     name: Datagen_001 To Splunk
     final: true

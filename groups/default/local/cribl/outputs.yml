@@ -45,7 +45,8 @@ outputs:
     addIdToStagePath: true
     removeEmptyDirs: false
     objectACL: private
-    partitionExpr: "`${host}/${sourcetype}`"
+    partitionExpr: "`${host}/${sourcetype}/${C.Time.strftime(_time,
+      '%Y-%m-%d')}/${C.Time.strftime(_time, '%H')}`"
     format: json
     baseFileName: "`CriblOut`"
     compress: none
