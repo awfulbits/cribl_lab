@@ -5,6 +5,10 @@ distributed:
     port: 4200
     tls:
       disabled: true
+      requestCert: false
+      certPath: $CRIBL_HOME/local/cribl/auth/certs/Cribl_Lab_Cert.crt
+      privKeyPath: $CRIBL_HOME/local/cribl/auth/certs/Cribl_Lab_Cert.key
+      certificateName: Cribl_Lab_Cert
     ipWhitelistRegex: /.*/
     maxActiveCxn: 0
     authToken: "#42:b2NApR0hXWCuzbrDtsdr/UYj0RIyAT0ChKxgkDvR2EA="

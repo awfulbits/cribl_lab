@@ -1,4 +1,4 @@
 default:
   description: Default Worker Group
   tags: default
-  configVersion: c7a7218
+  configVersion: c41d4f7
