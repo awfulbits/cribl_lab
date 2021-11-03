@@ -21,7 +21,7 @@ git:
   authType: ssh
   autoAction: none
   defaultCommitMessage: commit
-  remote: git@github.com:awfulbits/cribl_lab.git
+  remote: ssh://git@github.com:awfulbits/cribl_lab.git
 tls:
   defaultEcdhCurve: auto
   rejectUnauthorized: true
